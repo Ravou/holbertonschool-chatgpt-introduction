@@ -51,13 +51,12 @@ class Minesweeper:
                         self.reveal(nx, ny)
         return True
 
-def check_win(self):
-    # Vérifie si toutes les cellules sans mine ont été révélées
-    for y in range(self.height):
-        for x in range(self.width):
-            if (y * self.width + x) not in self.mines and not self.revealed[y][x]:
-                return False
-    return True
+    def check_win(self):
+        for y in range(self.height):
+            for x in range(self.width):
+                if (y * self.width + x) not in self.mines and not self.revealed[y][x]:
+                    return False
+                return True
 
     def play(self):
         while True:
